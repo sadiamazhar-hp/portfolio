@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Portfolio</title>
+    <link rel="stylesheet" href="Homepage.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="./Homepage.js" defer></script> 
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="aboutus">
+        <div class="aboutus-bg-container">
+            <div class="aboutus-bg"></div>
+        </div>
+        <img style="width: 550px;" src="./images/girlimage.png">
+        <h2 id="titlename">SADIA MAZHAR</h2>
+        <p class="title1">
+            <span class="title3">Welcome</span>
+            <span class="title2">I'm a FullStack Web Developer</span>
+        </p>
+        <button id="resume">RESUME</button>
+    </section>
+
+    <section id="skills">
+        <div id="skillsection" >
+            <img class="skill" src="./images/net.png">
+            <img class="skill" src="./images/react.png">
+            <img class="skill" src="./images/s.png">
+            <img class="skill" src="./images/js.png">
+            <img class="skill" src="./images/Postman.png">
+            <img class="skill" src="./images/py.png">
+            <img class="skill" src="./images/git.png">
+            <img class="skill" src="./images/figma.png">
+            
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="heading">Projects</h2>
+        <div id="projectsection">
+            <!-- First Project -->
+            <div class="project" onclick="showVideo()">
+                <img class="projectimg" src="./images/Qs.png" >
+                <div class="projectdata">
+                    <h3 class="projecttitle">Bull</h3>
+                    <p>the bull is red and its very angry and jdosjfosj fosjfoijdsoif sdofjoijdsfijoijojiojijdss ofjsoj jfojdsjf</p>
+                </div>
+                <div id="video-popup" class="video-popup">
+                    <div class="video-popup-content">
+                        <span class="close" onclick="closeVideo()">&times;</span>
+                        <video controls id="popup-video">
+                            <source src="./images/a.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Second Project -->
+            <div class="project" onclick="showVideo()">
+                <img class="projectimg" src="./images/blog.png" >
+                <div class="projectdata">
+                    <h3 class="projecttitle">Bull</h3>
+                    <p>the bull is red and its very angry and jdosjfosj fosjfoijdsoif sdofjoijdsfijoijojiojijdss ofjsoj jfojdsjf</p>
+                </div>
+                <div id="video-popup" class="video-popup">
+                    <div class="video-popup-content">
+                        <span class="close" onclick="closeVideo()">&times;</span>
+                        <video controls id="popup-video">
+                            <source src="./images/blogweb.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Third Project -->
+            <div class="project" onclick="showVideo()">
+                <img class="projectimg" src="./images/hos.jpg" >
+                <div class="projectdata">
+                    <h3 class="projecttitle">Bull</h3>
+                    <p>the bull is red and its very angry and jdosjfosj fosjfoijdsoif sdofjoijdsfijoijojiojijdss ofjsoj jfojdsjf</p>
+                </div>
+                <div id="video-popup" class="video-popup">
+                    <div class="video-popup-content">
+                        <span class="close" onclick="closeVideo()">&times;</span>
+                        <video controls id="popup-video">
+                            <source src="./images/HMS.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="experience">
+        <h2 class="heading">Education And Experience</h2>
+        <div class="expsection">
+        <div class="exp">
+                <h3 class="expname">Intern at ABC</h3>
+                <p class="expdesc">This 
+                    is a description of the internship</p>
+                <p class="exptime">feb2023-april2024</p>
+        </div>
+        <div class="exp">
+            <h3 class="expname">Intern at ABC</h3>
+            <p class="expdesc">This dlksadnlsa
+                sandkasnkd
+                dksandkanskndkasnkdnkaskdas
+                asdkjansdknas
+                is a description of the internship</p>
+            <p class="exptime">feb2023-april2024</p>
+    </div>
+    <div class="exp">
+        <h3 class="expname">Intern at ABC</h3>
+        <p class="expdesc">This 
+            is a description of the internship</p>
+        <p class="exptime">feb2023-april2024</p>
+</div>
+<div class="exp">
+    <h3 class="expname">Intern at ABC</h3>
+    <p class="expdesc">This 
+        is a description of the internship</p>
+    <p class="exptime">feb2023-april2024</p>
+</div>
+    </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="heading">Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" id="name" name="name" required placeholder="Name">
+            <input type="email" id="email" name="email" required placeholder="Email">
+            
+            <textarea id="message" name="message" required placeholder="Message"></textarea>
+            <button id="send-email" type="submit" onclick="sendmail()">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Web Developer Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="Homepage.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        function showVideo() {
+            document.getElementById("video-popup").style.display = "block";
+            document.getElementById("popup-video").play();
+        }
+        
+        function closeVideo() {
+            document.getElementById("video-popup").style.display = "none";
+            document.getElementById("popup-video").pause();
+            document.getElementById("popup-video").currentTime = 0;
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeVideo();
+            }
+        });
+        emailjs.init('XBvyjxBZUKkNHLkUh_EV3'); // Replace with your actual User ID
+        function sendmail() {
+            document.getElementById('send-email').addEventListener('click', () => {
+                emailjs.send('ID009', 'template_1pwjqlh', {
+                    from_name: document.getElementById('name').value,
+                    from_email: document.getElementById('email').value,
+                    message: document.getElementById('message').value
+                })
+                .then(response => console.log('Success:', response))
+                .catch(error => console.error('Error:', error));
+            });
+        }
+
+        // Call sendmail function after DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', sendmail);
+    </script>
+</body>
+</html>
