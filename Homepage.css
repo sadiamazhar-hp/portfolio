@@ -1,4 +1,5 @@
-/* General Styles */
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -50,14 +51,11 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    /* Remove the following lines */
-    /* position: fixed; */
-    /* width: 100%; */
-    /* bottom: 0; */
+
 }
 
 
-/* Contact Form Styles */
+
 #contact-form {
     display: flex;
     flex-direction: column;
@@ -91,7 +89,7 @@ footer {
 }
 
 #aboutus{
-    
+    position: relative;
     width:100%;
     
 }
@@ -119,27 +117,31 @@ footer {
     
     
 }
+
+
+
 .aboutus-bg-container {
+    
+    position: absolute;
+    width: 100%;
+    height: 500%; 
+    overflow: hidden;
+}
+
+
+.aboutus-bg {
+    
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-     /* Ensure no overflow outside the container */
-    z-index: -1; /* Ensure it is behind the content */
+    width: 400%; 
+    height: 500px;
+    background-color: rgba(94, 8, 8, 0.877);
+    transform: rotate(55deg);
+    transform-origin: top left;
+    z-index: -1;
 }
 
-.aboutus-bg {
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: 115%;
-    height: 400px;
-    background-color: rgba(139, 122, 122, 0.877); /* Semi-transparent background */
-    transform: rotate(52deg);
-    transform-origin: top left;
-    z-index: -1; /* Ensure it is behind the content */
-}
 .title3 {
     color: black;
     -webkit-text-stroke: 0.4px rgb(255, 255, 255);
@@ -147,14 +149,14 @@ footer {
 }
 .title2 {
     padding-top: 50px;
-    display: block; /* Ensures it starts on a new line */
-    
+    display: block;
+    width:100%;
     color: white;
 }
 #resume {
     position: absolute;
     top:70%;
-    
+    cursor: pointer;
     width:160px;
     height:40px;
     right: 24%;
@@ -163,16 +165,19 @@ footer {
     border-radius: 4px;
 }
 #skillsection {
+    backdrop-filter: blur(5px);
     width: 80%;
     height: 500px;
-    border: 1px solid #c3c3c3;
+    border: 2px solid #8f5858;
+    border-radius: 6px;
+    box-shadow: #000000 4px 6px 10px;
     display: grid;
     padding-top: 50px;
     margin-left: 10%;
-    grid-template-columns: repeat(3, 80px); /* Three columns of 80px each */
-    grid-auto-rows: 80px; /* Each row is 80px high */
-    gap: 20%; /* 50px gap between items */
-    justify-content: center; /* Center the grid items horizontally */
+    grid-template-columns: repeat(3, 80px); 
+    grid-auto-rows: 80px; 
+    gap: 20%; 
+    justify-content: center; 
 }
 
 .skill {
@@ -180,7 +185,7 @@ footer {
     height: 100px;
 }
 
-/* Specific positioning for the checkerboard pattern */
+
 .skill:nth-child(1) {
     grid-column: 1;
     grid-row: 1;
@@ -197,15 +202,15 @@ footer {
 }
 
 .skill:nth-child(4) {
-    grid-column: 1 / span 2; /* Spanning across the gap between 1st and 2nd skill */
+    grid-column: 1 / span 2;
     grid-row: 2;
-    justify-self: center; /* Center the item horizontally */
+    justify-self: center; 
 }
 
 .skill:nth-child(5) {
-    grid-column: 2 / span 2; /* Spanning across the gap between 2nd and 3rd skill */
+    grid-column: 2 / span 2; 
     grid-row: 2;
-    justify-self: center; /* Center the item horizontally */
+    justify-self: center;
 }
 
 .skill:nth-child(6) {
@@ -225,6 +230,7 @@ footer {
 #projectsection{
     display: flex;
     gap:50px;
+    flex-wrap: wrap;
     margin-left: 10%;
 }
 .project{
@@ -234,36 +240,37 @@ footer {
 
 }
 .projectdata {
-    background-color: #a85252;
+    background-color: #91737394;
     border-radius: 1.5rem;
     height: 195px;
     display: flex;
-    flex-direction: column; /* Align items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically if the container has a height */
-    text-align: center; /* Center text within the items */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
 }
 
 .projecttitle {
-    margin: 0; /* Remove any default margin */
-    padding: 10px; /* Optional: Add some padding for spacing */
+    margin: 0; 
+    padding: 10px; 
 }
 
 .projectimg{
     height: 200px;
     width:300px;
+    cursor: pointer;
    
 }
 .video-popup {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed; 
-    z-index: 1000; /* Ensure it is above everything else */
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8); /* Black with transparency */
+    background-color: rgba(0, 0, 0, 0.8); 
     backdrop-filter: blur(5px);
 }
 
@@ -299,7 +306,7 @@ footer {
 }
 .exp{
     
-    width:400px;
+    width:40%;
     flex-direction: row;
     margin-left: 10%;
     display: flex;
@@ -327,9 +334,4 @@ footer {
 
 .exptime{
     height: 40px;
-}
-
-
-#contact-form *{
-
 }
