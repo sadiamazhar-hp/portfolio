@@ -165,7 +165,7 @@ footer {
     border-radius: 4px;
 }
 #skillsection {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blue blur(5px) ;
     width: 80%;
     height: 500px;
     border: 2px solid #8f5858;
